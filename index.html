@@ -316,6 +316,33 @@
     }
     .cert-link:hover { text-decoration: underline; }
 
+    /* ─── CERT LOGO ─── */
+    .cert-header { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0.35rem; }
+    .cert-logo-img {
+      width: 22px; height: 22px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    /* ─── AI BADGE ─── */
+    .badge-ai { background: #dbeafe; color: #1d4ed8; }
+
+    /* ─── AI STACK LINE ─── */
+    .ai-stack {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      margin-top: 0.5rem; margin-bottom: 1.25rem;
+      font-size: 0.72rem; font-weight: 600;
+      color: #1d4ed8;
+      background: #dbeafe;
+      border-radius: 5px;
+      padding: 0.22rem 0.65rem;
+      letter-spacing: 0.04em;
+    }
+    .ai-stack::before { content: "⚡"; font-size: 0.75rem; }
+
     /* ─── CONTACT ─── */
     .contact-intro {
       font-size: 1rem; color: var(--gray);
@@ -468,11 +495,11 @@
         </div>
         <div class="ps">
           <p class="ps-label">Approach</p>
-          <p>Mapped Meta's <strong>Nest-based engineering infrastructure</strong> and connected it to a custom dashboard layer. Added <strong>Metamate</strong> — Meta's enterprise LLM built on Claude — as the AI reasoning layer. Designed <strong>Claude-based skills</strong> for delivery managers to track performance and drive team output without manual effort. Built and led a <strong>25-member dedicated AI delivery team</strong> within the Meta ecosystem.</p>
+          <p>Mapped Meta's <strong>Nest-based engineering infrastructure</strong> and connected it to a custom dashboard layer. Added <strong>Metamate</strong> — Meta's enterprise LLM built on Claude — as the AI reasoning layer. Designed <strong>Claude-based skills</strong> for delivery managers to track performance and drive team output without manual effort. As <strong>Wipro's designated AI Champion for the Meta account</strong>, drove AI infusion as a structured, account-wide operating practice — not a person-dependent experiment.</p>
         </div>
         <div class="ps">
           <p class="ps-label">Solution</p>
-          <p>The <strong>Hatch Dashboard</strong> connects to Meta's Nest stack and aggregates diffs landed, review comments, and task throughput into a live delivery health view — shareable directly with the Meta client. The <strong>Claude skills framework</strong> gives delivery managers structured AI-driven insights. <strong>10+ agents</strong> delivered across agentic workflows embedded into ongoing delivery operations.</p>
+          <p>The <strong>Hatch Dashboard</strong> connects to Meta's Nest stack and aggregates diffs landed, review comments, and task throughput into a live delivery health view — shareable directly with the Meta client. The <strong>Claude skills framework</strong> gives delivery managers structured AI-driven insights embedded into ongoing delivery operations — making AI a delivery capability, not a feature layer.</p>
         </div>
         <div class="ps">
           <p class="ps-label">Outcome</p>
@@ -480,9 +507,9 @@
         </div>
         <div class="case-stats">
           <div class="stat"><span class="stat-n">450+</span><span class="stat-l">Engineers</span></div>
-          <div class="stat"><span class="stat-n">10+</span><span class="stat-l">AI Agents Built</span></div>
+          <div class="stat"><span class="stat-n">AI&nbsp;Champion</span><span class="stat-l">Wipro · Meta Account</span></div>
           <div class="stat"><span class="stat-n">~20%</span><span class="stat-l">Effort Reduction</span></div>
-          <span class="stat-q">"client-shareable, not just internal"</span>
+          <span class="stat-q">"AI infusion as practice, not a project"</span>
         </div>
       </div>
 
@@ -626,7 +653,7 @@
       <div class="section-head">
         <p class="section-tag">Things I've Built</p>
         <h2 class="section-title">Projects</h2>
-        <p class="section-desc">Side projects and experiments — built nights and weekends to solve real problems, learn new tools, and ship something that works.</p>
+        <p class="section-desc">Working AI agents and prototypes — built nights and weekends. Each one solves a real problem with LLMs, agentic architectures, or live data APIs. These aren't concepts — they run.</p>
       </div>
 
       <!-- ── PROJECT 01: OPTIONS TRADING ── -->
@@ -709,10 +736,14 @@
       <div class="case-card">
         <div class="case-top">
           <span class="case-num">Project 02 &nbsp;·&nbsp; Job Agent</span>
-          <span class="badge badge-personal">Personal Project</span>
+          <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+            <span class="badge badge-ai">Gemini 2.0 Flash</span>
+            <span class="badge badge-personal">Personal Project</span>
+          </div>
         </div>
-        <h3 class="case-title">A daily automated job search agent that finds senior product roles, surfaces referral paths, and drafts outreach — delivered to your inbox at 7 AM.</h3>
-        <p class="case-sub">Because manually checking Indeed, Naukri, and LinkedIn every morning is not how you run a job search.</p>
+        <h3 class="case-title">A Gemini-powered AI agent that autonomously scouts senior product roles, finds warm referral paths inside your network, and drafts personalised outreach — every morning at 7 AM, zero effort required.</h3>
+        <p class="case-sub">Because finding a job through warm networks takes daily discipline — so I automated the discipline.</p>
+        <span class="ai-stack">Gemini 2.0 Flash &nbsp;·&nbsp; async scraping &nbsp;·&nbsp; LLM message drafting &nbsp;·&nbsp; cron scheduling</span>
 
         <div class="diagram">
           <div class="d-flow">
@@ -778,10 +809,14 @@
       <div class="case-card">
         <div class="case-top">
           <span class="case-num">Project 03 &nbsp;·&nbsp; Antigravity — Wealth PMS</span>
-          <span class="badge badge-personal">Personal Project</span>
+          <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+            <span class="badge badge-ai">GPT-4 · LangGraph</span>
+            <span class="badge badge-personal">Personal Project</span>
+          </div>
         </div>
-        <h3 class="case-title">An autonomous portfolio management agent that monitors Indian equity holdings, reasons over live market data, and proposes trades — governed by strict risk guardrails.</h3>
+        <h3 class="case-title">A GPT-4 + LangGraph agentic state machine that monitors Indian equity holdings, reasons over live technical indicators and news sentiment, and proposes trades — governed by hard risk guardrails.</h3>
         <p class="case-sub">Because portfolio decisions shouldn't depend on whether you're watching the screen at 10 AM.</p>
+        <span class="ai-stack">GPT-4 (temp=0) &nbsp;·&nbsp; LangGraph state machine &nbsp;·&nbsp; yfinance &nbsp;·&nbsp; Tavily news &nbsp;·&nbsp; Sharekhan API</span>
 
         <div class="diagram">
           <div class="d-flow">
@@ -896,7 +931,7 @@
         </div>
         <div class="ps">
           <p class="ps-label">Approach</p>
-          <p>Joined as <strong>Product Manager</strong> — owned design, user workflows, live session flows, testing, and experimentation. Kept the experience simple: discover a cook, book a class, join live, cook together. Video and real-time chat handed off to <strong>Zoom and Firebase</strong> so the team could focus on product, not infrastructure.</p>
+          <p>The original idea was Shriniwas's — he was the <strong>product and business brain behind Kooklive</strong>. Owned the concept, user experience design, workflows, live session flows, and all experimentation. Kept the product simple and focused: discover a cook, book a class, join live, cook together. Video and real-time chat handed off to <strong>Zoom and Firebase</strong> so the team could focus on product, not infrastructure.</p>
         </div>
         <div class="ps">
           <p class="ps-label">Solution</p>
@@ -936,18 +971,27 @@
         <p class="cert-group-title">AI &amp; Technology</p>
         <div class="cert-grid">
           <div class="cert-card">
-            <p class="cert-issuer">Anthropic</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=32" class="cert-logo-img" alt="Anthropic">
+              <p class="cert-issuer">Anthropic</p>
+            </div>
             <p class="cert-name">Claude Certified Architect (Foundations)</p>
             <p class="cert-date">Valid Apr 2026 – Oct 2026</p>
             <a href="https://verify.skilljar.com/c/huanchzmfz7g" target="_blank" rel="noopener" class="cert-link">Verify credential ↗</a>
           </div>
           <div class="cert-card">
-            <p class="cert-issuer">Udemy</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=udemy.com&sz=32" class="cert-logo-img" alt="Udemy">
+              <p class="cert-issuer">Udemy</p>
+            </div>
             <p class="cert-name">Master Generative AI For Leaders &amp; Business Professionals</p>
             <p class="cert-date">Issued Aug 2025 &nbsp;·&nbsp; ID: UC-0b6b4ed4</p>
           </div>
           <div class="cert-card">
-            <p class="cert-issuer">GitHub / Microsoft</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=github.com&sz=32" class="cert-logo-img" alt="GitHub">
+              <p class="cert-issuer">GitHub / Microsoft</p>
+            </div>
             <p class="cert-name">GitHub Copilot Certification</p>
             <p class="cert-date">Issued 2024</p>
           </div>
@@ -959,17 +1003,26 @@
         <p class="cert-group-title">Business &amp; Leadership</p>
         <div class="cert-grid">
           <div class="cert-card">
-            <p class="cert-issuer">Udemy</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=udemy.com&sz=32" class="cert-logo-img" alt="Udemy">
+              <p class="cert-issuer">Udemy</p>
+            </div>
             <p class="cert-name">Become a Master of Client &amp; Account Management</p>
             <p class="cert-date">Issued Aug 2025 &nbsp;·&nbsp; ID: UC-82f2bf2f</p>
           </div>
           <div class="cert-card">
-            <p class="cert-issuer">Udemy</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=udemy.com&sz=32" class="cert-logo-img" alt="Udemy">
+              <p class="cert-issuer">Udemy</p>
+            </div>
             <p class="cert-name">Leadership: Practical Leadership Skills</p>
             <p class="cert-date">Issued Aug 2025 &nbsp;·&nbsp; ID: UC-31501dd0</p>
           </div>
           <div class="cert-card">
-            <p class="cert-issuer">Google</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" class="cert-logo-img" alt="Google">
+              <p class="cert-issuer">Google</p>
+            </div>
             <p class="cert-name">The Fundamentals of Digital Marketing</p>
             <p class="cert-date">Issued Jan 2019 &nbsp;·&nbsp; ID: M78 SZA 4DH</p>
           </div>
@@ -981,17 +1034,26 @@
         <p class="cert-group-title">Design &amp; Finance</p>
         <div class="cert-grid">
           <div class="cert-card">
-            <p class="cert-issuer">Copenhagen Institute of Interaction Design (CIID)</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=ciid.dk&sz=32" class="cert-logo-img" alt="CIID">
+              <p class="cert-issuer">Copenhagen Institute of Interaction Design (CIID)</p>
+            </div>
             <p class="cert-name">Summer School — Prototyping as a Process</p>
             <p class="cert-date">Issued Dec 2018</p>
           </div>
           <div class="cert-card">
-            <p class="cert-issuer">NSE India</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=nseindia.com&sz=32" class="cert-logo-img" alt="NSE India">
+              <p class="cert-issuer">NSE India</p>
+            </div>
             <p class="cert-name">NSE Derivative Markets</p>
             <p class="cert-date">Issued Mar 2011</p>
           </div>
           <div class="cert-card">
-            <p class="cert-issuer">NSE India</p>
+            <div class="cert-header">
+              <img src="https://www.google.com/s2/favicons?domain=nseindia.com&sz=32" class="cert-logo-img" alt="NSE India">
+              <p class="cert-issuer">NSE India</p>
+            </div>
             <p class="cert-name">NSE Capital Markets</p>
             <p class="cert-date">Issued Jan 2011</p>
           </div>
