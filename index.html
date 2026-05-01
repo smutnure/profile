@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shriniwas Mutnure — Product & AI Business Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --bg:          #ffffff;
+      --navy:        #0d1b2a;
+      --gray:        #6b7280;
+      --muted:       #9ca3af;
+      --blue:        #2d6a8f;
+      --blue-hover:  #245a7a;
+      --blue-light:  #e8f1f8;
+      --blue-mid:    #c8dce9;
+      --card-bg:     #f0f5f9;
+      --border:      #e2e8f0;
+      --green-bg:    #d1fae5;
+      --green-text:  #065f46;
+      --orange-bg:   #fed7aa;
+      --orange-text: #9a3412;
+      --purple-bg:   #ede9fe;
+      --purple-text: #5b21b6;
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1.25rem, 5vw, 3.5rem);
+      height: 58px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-weight: 800; font-size: 1.05rem;
+      color: var(--navy); text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-links { display: flex; list-style: none; align-items: center; gap: 0; }
+    .nav-links li a,
+    .nav-links li button {
+      display: block;
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.875rem; font-weight: 500;
+      padding: 0.45rem 0.85rem;
+      border: none; background: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.15s;
+      position: relative;
+      white-space: nowrap;
+    }
+    .nav-links li a:hover,
+    .nav-links li button:hover { color: var(--navy); }
+    .nav-links li button.active { color: var(--navy); font-weight: 600; }
+    .nav-links li button.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0.85rem; right: 0.85rem;
+      height: 2px; background: var(--navy); border-radius: 2px;
+    }
+
+    /* ─── LAYOUT ─── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2rem); }
+
+    /* ─── TABS ─── */
+    .tab-section { display: none; }
+    .tab-section.active { display: block; }
+
+    /* ─── HERO ─── */
+    .hero { padding: 5rem 0 3.5rem; }
+    .hero-label {
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .hero-heading {
+      font-size: clamp(2.3rem, 5.2vw, 3.75rem);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .handwritten {
+      font-family: 'Caveat', cursive;
+      font-weight: 700; font-style: italic;
+      color: var(--blue);
+      font-size: 1.15em;
+      letter-spacing: 0;
+    }
+    .hero-body {
+      font-size: 1.05rem; color: var(--gray);
+      max-width: 600px; line-height: 1.85;
+      margin-bottom: 2.25rem;
+    }
+    .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.58rem 1.2rem;
+      border-radius: 7px;
+      font-size: 0.84rem; font-weight: 600;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.15s;
+      cursor: pointer; border: 1.5px solid transparent;
+    }
+    .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .btn-primary:hover { background: var(--blue-hover); border-color: var(--blue-hover); }
+    .btn-outline { background: transparent; color: var(--navy); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--navy); }
+    .btn-plain { background: transparent; color: var(--gray); border-color: transparent; }
+    .btn-plain:hover { color: var(--navy); }
+
+    /* ─── SECTION HEAD ─── */
+    .section-head { padding-top: 4rem; margin-bottom: 2.5rem; }
+    .section-tag {
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
+    .section-title {
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      font-weight: 700; color: var(--navy);
+      letter-spacing: -0.025em; margin-bottom: 0.6rem;
+    }
+    .section-desc {
+      font-size: 0.975rem; color: var(--gray);
+      max-width: 580px; line-height: 1.8;
+    }
+
+    /* ─── CASE CARD ─── */
+    .case-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border-left: 4px solid var(--blue);
+      padding: 2.25rem;
+      margin-bottom: 1.75rem;
+    }
+    .case-top {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 1rem;
+      margin-bottom: 1rem; flex-wrap: wrap;
+    }
+    .case-num {
+      font-size: 0.72rem; font-weight: 600;
+      color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .badge {
+      font-size: 0.67rem; font-weight: 700;
+      padding: 0.18rem 0.6rem; border-radius: 20px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .badge-current  { background: var(--green-bg);  color: var(--green-text);  }
+    .badge-founder  { background: var(--orange-bg);  color: var(--orange-text); }
+    .badge-personal { background: var(--blue-light); color: var(--blue);        }
+    .badge-collab   { background: var(--purple-bg);  color: var(--purple-text); }
+
+    .case-title {
+      font-size: clamp(1.1rem, 2.4vw, 1.42rem);
+      font-weight: 700; color: var(--navy);
+      letter-spacing: -0.02em; line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+    .case-sub {
+      font-size: 0.94rem; color: var(--gray);
+      font-style: italic; margin-bottom: 1.75rem;
+    }
+
+    /* ─── DIAGRAM ─── */
+    .diagram {
+      background: var(--blue-light);
+      border: 1.5px dashed #7fb3cf;
+      border-radius: 10px;
+      padding: 1.75rem 1.5rem 1.25rem;
+      margin-bottom: 1.75rem;
+      position: relative;
+    }
+    .d-flow { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .d-row {
+      display: flex; align-items: center;
+      justify-content: center; gap: 10px;
+      width: 100%; margin: 3px 0;
+    }
+    .d-node {
+      background: #fff;
+      border: 1.5px solid #7fb3cf;
+      border-radius: 9px;
+      padding: 8px 14px;
+      text-align: center;
+      min-width: 130px; max-width: 260px; flex: 1 1 130px;
+    }
+    .d-node.main { background: var(--blue); border-color: var(--blue); }
+    .d-node-label {
+      font-family: 'Caveat', cursive;
+      font-size: 1.08rem; font-weight: 600; font-style: italic;
+      display: block; color: var(--navy);
+    }
+    .d-node.main .d-node-label { color: #fff; }
+    .d-node-sub {
+      font-size: 0.68rem; color: var(--gray);
+      font-family: 'Inter', sans-serif;
+      margin-top: 2px; display: block; line-height: 1.4;
+    }
+    .d-node.main .d-node-sub { color: rgba(255,255,255,0.82); }
+    .d-arrow {
+      color: var(--blue); font-size: 1.25rem;
+      text-align: center; line-height: 1; padding: 1px 0;
+    }
+    .d-side-label {
+      font-family: 'Caveat', cursive;
+      font-size: 0.88rem; color: var(--muted);
+      font-style: italic; white-space: nowrap; margin-left: 6px;
+    }
+    .diagram-caption {
+      font-family: 'Caveat', cursive;
+      font-size: 0.98rem; color: var(--gray);
+      text-align: center; margin-top: 1.1rem; font-style: italic;
+    }
+
+    /* ─── PROBLEM / APPROACH SECTIONS ─── */
+    .ps { border-left: 3px solid var(--blue-mid); padding-left: 1.2rem; margin-bottom: 1.5rem; }
+    .ps-label {
+      font-size: 0.67rem; font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 0.38rem;
+    }
+    .ps p { font-size: 0.92rem; color: var(--gray); line-height: 1.82; }
+    .ps p strong { color: var(--navy); font-weight: 600; }
+
+    /* ─── STATS ─── */
+    .case-stats {
+      display: flex; gap: 2rem; flex-wrap: wrap;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--blue-mid);
+      align-items: flex-end;
+    }
+    .stat-n {
+      font-size: 1.85rem; font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      display: block; line-height: 1;
+    }
+    .stat-l {
+      font-size: 0.65rem; font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: 3px; display: block;
+    }
+    .stat-q {
+      font-family: 'Caveat', cursive;
+      font-size: 1.02rem; color: var(--gray);
+      font-style: italic; align-self: flex-end; padding-bottom: 1px;
+    }
+
+    /* ─── CERTIFICATIONS ─── */
+    .cert-group { margin-bottom: 2.25rem; }
+    .cert-group-title {
+      font-size: 0.69rem; font-weight: 700;
+      color: var(--blue); letter-spacing: 0.14em; text-transform: uppercase;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.85rem;
+    }
+    .cert-card {
+      background: var(--card-bg); border-radius: 9px;
+      padding: 1.05rem 1.2rem;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .cert-card:hover { border-color: var(--blue); }
+    .cert-issuer {
+      font-size: 0.67rem; font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 0.28rem;
+    }
+    .cert-name {
+      font-size: 0.875rem; font-weight: 600;
+      color: var(--navy); line-height: 1.4; margin-bottom: 0.22rem;
+    }
+    .cert-date { font-size: 0.74rem; color: var(--muted); }
+    .cert-link {
+      display: inline-block; margin-top: 0.38rem;
+      font-size: 0.71rem; color: var(--blue);
+      text-decoration: none; font-weight: 500;
+    }
+    .cert-link:hover { text-decoration: underline; }
+
+    /* ─── CONTACT ─── */
+    .contact-intro {
+      font-size: 1rem; color: var(--gray);
+      max-width: 500px; line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+    .contact-list { display: flex; flex-direction: column; gap: 1.1rem; max-width: 480px; }
+    .c-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .c-label {
+      font-size: 0.67rem; font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      width: 72px; flex-shrink: 0; padding-top: 2px;
+    }
+    .c-val { font-size: 0.925rem; color: var(--navy); }
+    .c-val a { color: var(--navy); text-decoration: none; }
+    .c-val a:hover { color: var(--blue); text-decoration: underline; }
+
+    /* ─── TAB PADDING ─── */
+    .tab-body { padding-bottom: 5rem; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.77rem;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 700px) {
+      .nav-links li a,
+      .nav-links li button { padding: 0.45rem 0.5rem; font-size: 0.78rem; }
+      .case-card { padding: 1.4rem; }
+      .diagram { padding: 1.2rem 0.9rem; }
+      .d-node { min-width: 80px; padding: 6px 9px; }
+      .d-node-label { font-size: 0.92rem; }
+      .d-node-sub { font-size: 0.6rem; }
+      .hero { padding: 3.5rem 0 2.5rem; }
+      .case-stats { gap: 1.25rem; }
+      .stat-n { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAV
+══════════════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-logo" onclick="showTab('work');return false;">SM</a>
+  <ul class="nav-links">
+    <li><button id="btn-work"    class="active" onclick="showTab('work')">Work</button></li>
+    <li><button id="btn-projects"              onclick="showTab('projects')">Projects</button></li>
+    <li><button id="btn-certs"                 onclick="showTab('certs')">Certifications</button></li>
+    <li><a href="https://www.linkedin.com/in/shriniwas-mutnure-361b977/" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="Shriniwasv10.pdf" download>Resume</a></li>
+    <li><button id="btn-contact"               onclick="showTab('contact')">Contact</button></li>
+  </ul>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     WORK TAB
+══════════════════════════════════════ -->
+<div id="sec-work" class="tab-section active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">Shriniwas Mutnure</p>
+      <h1 class="hero-heading">
+        I build products, businesses,<br>
+        and teams that <span class="handwritten">actually deliver.</span>
+      </h1>
+      <p class="hero-body">
+        Product and AI Business Leader with 15+ years of experience driving 0→1 product launches,
+        growth strategy, and P&amp;L ownership across consumer internet, enterprise SaaS, and edtech.
+        Co-founder. Builder. AI champion. This isn't a résumé — it's the problems I picked up,
+        how I approached them, and what shipped.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary" onclick="document.getElementById('case-studies').scrollIntoView({behavior:'smooth'})">&#9632; See Case Studies</button>
+        <button class="btn btn-outline" onclick="showTab('projects')">&#9632; Projects</button>
+        <a href="Shriniwasv10.pdf" download class="btn btn-plain">&#9632; Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <div id="case-studies" class="tab-body">
+    <div class="container">
+      <div class="section-head" style="padding-top: 1rem;">
+        <p class="section-tag">What I've Built</p>
+        <h2 class="section-title">Case Studies</h2>
+        <p class="section-desc">Three builder's stories, framed the way I actually think about them: what was broken, what I built, and what changed.</p>
+      </div>
+
+      <!-- ── CASE 01: WIPRO / META ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Case 01 &nbsp;·&nbsp; Wipro | Meta Account</span>
+          <span class="badge badge-current">Current</span>
+        </div>
+        <h3 class="case-title">An AI delivery intelligence system that gave 450+ engineers real-time visibility — and gave their managers AI superpowers.</h3>
+        <p class="case-sub">Because at Meta's scale, "I'll check manually" is not how you run a delivery operation.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Engineer Activity</span>
+                <span class="d-node-sub">diffs landed &nbsp;·&nbsp; code reviews &nbsp;·&nbsp; tasks closed</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Hatch / Meta Nest Stack</span>
+                <span class="d-node-sub">Meta's proprietary engineering delivery platform</span>
+              </div>
+              <span class="d-side-label">← Meta's proprietary infrastructure</span>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Hatch Dashboard</span>
+                <span class="d-node-sub">real-time delivery health &nbsp;·&nbsp; KPI tracking</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">Metamate + Claude Skills</span>
+                <span class="d-node-sub">AI insights &nbsp;·&nbsp; productivity layer &nbsp;·&nbsp; team performance</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Delivery Leaders + Client Reports</span>
+                <span class="d-node-sub">real-time &nbsp;·&nbsp; shareable &nbsp;·&nbsp; cadenced &nbsp;·&nbsp; automated</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">engineering activity flows in, delivery intelligence flows out — and straight to the client</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>Engineering delivery for the Meta team was invisible. Tracking <strong>diffs landed</strong>, code review cycles, and task throughput required manual effort across Meta's proprietary <strong>Hatch/Nest</strong> systems. Service delivery had no real-time health signal — and AI infusion was ad-hoc and person-dependent, not a practice.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p>Mapped Meta's <strong>Nest-based engineering infrastructure</strong> and connected it to a custom dashboard layer. Added <strong>Metamate</strong> — Meta's enterprise LLM built on Claude — as the AI reasoning layer. Designed <strong>Claude-based skills</strong> for delivery managers to track performance and drive team output without manual effort. Built and led a <strong>25-member dedicated AI delivery team</strong> within the Meta ecosystem.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>The <strong>Hatch Dashboard</strong> connects to Meta's Nest stack and aggregates diffs landed, review comments, and task throughput into a live delivery health view — shareable directly with the Meta client. The <strong>Claude skills framework</strong> gives delivery managers structured AI-driven insights. <strong>10+ agents</strong> delivered across agentic workflows embedded into ongoing delivery operations.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Outcome</p>
+          <p>Eliminated manual tracking entirely. Delivery leaders now have a real-time, client-shareable engineering health dashboard. Skills framework running across the service delivery practice — measurable <strong>~20% reduction in manual effort</strong>, improved customer experience across select Meta workflows, and AI infusion at scale.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">450+</span><span class="stat-l">Engineers</span></div>
+          <div class="stat"><span class="stat-n">10+</span><span class="stat-l">AI Agents Built</span></div>
+          <div class="stat"><span class="stat-n">~20%</span><span class="stat-l">Effort Reduction</span></div>
+          <span class="stat-q">"client-shareable, not just internal"</span>
+        </div>
+      </div>
+
+      <!-- ── CASE 02: LEADPIXIE ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Case 02 &nbsp;·&nbsp; FLZ Private Limited &nbsp;·&nbsp; LeadPixie</span>
+          <span class="badge badge-founder">Co-Founder &amp; CPO</span>
+        </div>
+        <h3 class="case-title">A sales &amp; marketing CRM for SMBs that can't afford to lose a single lead — built from scratch and scaled to 150+ customers.</h3>
+        <p class="case-sub">Because spreadsheets and WhatsApp groups are not a pipeline.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Lead Sources</span>
+                <span class="d-node-sub">web &nbsp;·&nbsp; social &nbsp;·&nbsp; referral &nbsp;·&nbsp; inbound</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">LeadPixie CRM Core</span>
+                <span class="d-node-sub">capture &nbsp;·&nbsp; qualify &nbsp;·&nbsp; pipeline &nbsp;·&nbsp; nurture</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Marketing Campaigns</span>
+                <span class="d-node-sub">automated follow-ups &nbsp;·&nbsp; sequences</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">Analytics Dashboard</span>
+                <span class="d-node-sub">conversion &nbsp;·&nbsp; funnel &nbsp;·&nbsp; MoM growth</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">one platform from first touch to closed deal — and a number that proves it's working</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>SMBs across education, retail, and tech were managing their entire sales pipeline across <strong>spreadsheets, WhatsApp threads, and disconnected email tools</strong> — with zero visibility into what was actually converting. Lead follow-up was manual, inconsistent, and leaky.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p>Built LeadPixie from scratch as a <strong>unified lead management and sales automation platform</strong>. Started narrow — lead capture and pipeline visibility — then layered in marketing automation, sequences, and conversion analytics. Kept the UX simple enough that a non-technical SMB owner could use it on day one.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>A full-stack <strong>Sales &amp; Marketing CRM</strong> tailored for SMBs. Lead capture → qualification → pipeline → nurture → campaigns → conversion tracking in one platform. Targeted education, retail, and tech sectors where lead velocity and follow-up speed are everything.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Outcome</p>
+          <p>Grew to <strong>150+ customers</strong> with <strong>20% month-on-month growth</strong>, near-zero churn, and <strong>INR 0.5Cr in revenue</strong> — demonstrating strong product-market fit and operational scalability as a standalone SaaS product.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">150+</span><span class="stat-l">Customers</span></div>
+          <div class="stat"><span class="stat-n">20%</span><span class="stat-l">MoM Growth</span></div>
+          <div class="stat"><span class="stat-n">₹0.5Cr</span><span class="stat-l">Revenue</span></div>
+          <span class="stat-q">"near-zero churn from day one"</span>
+        </div>
+      </div>
+
+      <!-- ── CASE 03: FLEXSHAALA ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Case 03 &nbsp;·&nbsp; FLZ Private Limited &nbsp;·&nbsp; FlexShaala</span>
+          <span class="badge badge-founder">Co-Founder &amp; CPO</span>
+        </div>
+        <h3 class="case-title">A school ERP + game-based LMS that replaced five disconnected systems — reaching 150 schools, 90,000 students, and 1,000 teachers.</h3>
+        <p class="case-sub">Because running a school shouldn't require a different app for every problem.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Users</span>
+                <span class="d-node-sub">students &nbsp;·&nbsp; teachers &nbsp;·&nbsp; admins &nbsp;·&nbsp; parents</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">FlexShaala Core ERP</span>
+                <span class="d-node-sub">fees &nbsp;·&nbsp; attendance &nbsp;·&nbsp; scheduling &nbsp;·&nbsp; communication</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Flexagn LMS App</span>
+                <span class="d-node-sub">games &nbsp;·&nbsp; comics &nbsp;·&nbsp; experiments &nbsp;·&nbsp; content</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">Publisher Integrations</span>
+                <span class="d-node-sub">South India book publishers &nbsp;·&nbsp; digital content</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">five tools replaced, one login for everyone — admin to student to parent</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>Schools in India were managing fees, attendance, grades, parent communication, and online learning across <strong>multiple disconnected systems</strong> — creating chaos for administrators, teachers, and parents. There was no single source of truth for anything.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p>Built FlexShaala as an <strong>integrated ERP + game-based LMS</strong>. The <strong>Flexagn student app</strong> delivered curriculum-aligned content — learning games, comics, and experiments — making learning engaging rather than passive. Strategic partnerships with <strong>South India's top book publishers</strong> embedded digital content directly into the platform, driving institutional adoption.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>A single platform covering school administration (fees, attendance, scheduling, parent communication) and learning delivery (bite-sized content, interactive games, curriculum-aligned experiments). The publisher partnership model created a <strong>B2B2C distribution flywheel</strong> that expanded reach without proportional sales cost.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Outcome</p>
+          <p>Reached <strong>150+ schools, 90K+ students, and 1K+ teachers</strong>. Publisher partnerships onboarded an additional <strong>100+ schools</strong> across South India without proportional sales investment.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">150+</span><span class="stat-l">Schools</span></div>
+          <div class="stat"><span class="stat-n">90K+</span><span class="stat-l">Students</span></div>
+          <div class="stat"><span class="stat-n">100+</span><span class="stat-l">Publisher Partnerships</span></div>
+          <span class="stat-q">"B2B2C flywheel that sold itself"</span>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </div><!-- /case-studies -->
+</div><!-- /sec-work -->
+
+
+<!-- ══════════════════════════════════════
+     02 PROJECTS TAB
+══════════════════════════════════════ -->
+<div id="sec-projects" class="tab-section">
+  <div class="tab-body">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Things I've Built</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Side projects and experiments — built nights and weekends to solve real problems, learn new tools, and ship something that works.</p>
+      </div>
+
+      <!-- ── PROJECT 01: OPTIONS TRADING ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Project 01 &nbsp;·&nbsp; BazaarGaram</span>
+          <span class="badge badge-personal">Personal Project</span>
+        </div>
+        <h3 class="case-title">An options chain analyser for NIFTY &amp; BANKNIFTY that surfaces strategy recommendations — without placing a single order.</h3>
+        <p class="case-sub">Because good options trading starts with reading the market structure, not reacting to it.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">NIFTY / BANKNIFTY</span>
+                <span class="d-node-sub">Angel One SmartAPI &nbsp;·&nbsp; live options chain</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Spot Price Engine</span>
+                <span class="d-node-sub">3-fallback: SmartAPI → Scrip Search → Put-Call Parity</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Options Chain Fetcher</span>
+                <span class="d-node-sub">8 strikes ATM ± &nbsp;·&nbsp; CE/PE LTP &nbsp;·&nbsp; OI &nbsp;·&nbsp; Volume</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Analysis Engine</span>
+                <span class="d-node-sub">PCR &nbsp;·&nbsp; Max Pain &nbsp;·&nbsp; OI Support/Resistance &nbsp;·&nbsp; IV Skew</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Strategy Recommender</span>
+                <span class="d-node-sub">straddle &nbsp;·&nbsp; bull spread &nbsp;·&nbsp; iron condor &nbsp;·&nbsp; strangle</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Recommendation Output</span>
+                <span class="d-node-sub">entry &nbsp;·&nbsp; stop loss &nbsp;·&nbsp; target &nbsp;·&nbsp; payoff profile</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">market structure first, strategy second — never the other way around</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>Reading options market structure manually — PCR, Max Pain, OI levels, IV skew across strikes — takes 30+ minutes before a session. Most traders skip it and trade on gut feel, reacting to price rather than understanding where the market is positioned.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p>Pure <strong>quantitative analysis engine</strong> — no LLM needed here, the math is deterministic. Fetch live options chain from Angel One, run four market structure signals in parallel, then map to the most appropriate strategy payoff profile. <strong>Three-fallback spot price logic</strong> handles Angel One API inconsistencies gracefully.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>Single API endpoint — pass underlying + expiry type + strategy → get <strong>full chain analysis + recommendation</strong> in seconds. Covers <strong>6 strategy types</strong>: simple buy, bull call spread, bear put spread, straddle, strangle, iron condor. No orders placed — analysis and conviction, user decides.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">6</span><span class="stat-l">Strategy Types</span></div>
+          <div class="stat"><span class="stat-n">NIFTY</span><span class="stat-l">+ Banknifty</span></div>
+          <div class="stat"><span class="stat-n">3</span><span class="stat-l">Fallback Layers</span></div>
+          <span class="stat-q">"no orders placed — conviction first"</span>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 02: JOB AGENT ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Project 02 &nbsp;·&nbsp; Job Agent</span>
+          <span class="badge badge-personal">Personal Project</span>
+        </div>
+        <h3 class="case-title">A daily automated job search agent that finds senior product roles, surfaces referral paths, and drafts outreach — delivered to your inbox at 7 AM.</h3>
+        <p class="case-sub">Because manually checking Indeed, Naukri, and LinkedIn every morning is not how you run a job search.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Job Sources</span>
+                <span class="d-node-sub">Indeed RSS &nbsp;·&nbsp; Naukri API &nbsp;·&nbsp; LinkedIn Public</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Job Scout + Scorer</span>
+                <span class="d-node-sub">40+ role keywords &nbsp;·&nbsp; location filter &nbsp;·&nbsp; dedup cache</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Referral Finder</span>
+                <span class="d-node-sub">LinkedIn CSV → IIM &nbsp;·&nbsp; BITS &nbsp;·&nbsp; Amazon &nbsp;·&nbsp; Meta alumni</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Message Drafter</span>
+                <span class="d-node-sub">Gemini 2.0 Flash &nbsp;·&nbsp; personalised per referral</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Daily Email Digest</span>
+                <span class="d-node-sub">jobs &nbsp;·&nbsp; referrals &nbsp;·&nbsp; warm lead URLs &nbsp;·&nbsp; 7 AM IST</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">your alumni network does the hard part — you just have to send the message</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>Senior product and business roles in India are filled through warm networks, not cold applications. But maintaining daily tracking across three platforms, scoring relevance, and drafting personalised referral messages is a <strong>full-time job in itself</strong>.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p><strong>Async scraping</strong> across Indeed RSS, Naukri API, and LinkedIn public jobs. Relevance scoring against 40+ role keywords with location and recency filters. LinkedIn connection CSV matched against hiring companies. <strong>Gemini 2.0 Flash</strong> drafts personalised referral messages. Alumni network baked in — IIM Bangalore, BITS Pilani, Amazon, Cookpad, Meta, Zynga.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>A daily digest delivered to your inbox at 7 AM: ranked job list, <strong>direct referral suggestions with drafted messages</strong>, and alumni/warm-lead LinkedIn search URLs. Seen-jobs cache prevents duplicates for 7 days. Cron-scheduled, zero manual effort.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">3</span><span class="stat-l">Job Sources</span></div>
+          <div class="stat"><span class="stat-n">40+</span><span class="stat-l">Role Keywords</span></div>
+          <div class="stat"><span class="stat-n">7AM</span><span class="stat-l">Daily Digest</span></div>
+          <span class="stat-q">"powered by Gemini 2.0 Flash"</span>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 03: PMS AGENT ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Project 03 &nbsp;·&nbsp; Antigravity — Wealth PMS</span>
+          <span class="badge badge-personal">Personal Project</span>
+        </div>
+        <h3 class="case-title">An autonomous portfolio management agent that monitors Indian equity holdings, reasons over live market data, and proposes trades — governed by strict risk guardrails.</h3>
+        <p class="case-sub">Because portfolio decisions shouldn't depend on whether you're watching the screen at 10 AM.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Sharekhan Broker API</span>
+                <span class="d-node-sub">holdings &nbsp;·&nbsp; available cash &nbsp;·&nbsp; margin</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Perception Node</span>
+                <span class="d-node-sub">portfolio state &nbsp;·&nbsp; total valuation</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Reasoning Node — GPT-4</span>
+                <span class="d-node-sub">yfinance &nbsp;·&nbsp; RSI / MACD / Bollinger &nbsp;·&nbsp; Tavily news &nbsp;·&nbsp; temp=0</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Guardrails Validator</span>
+                <span class="d-node-sub">market hours &nbsp;·&nbsp; 10% concentration &nbsp;·&nbsp; 2% drawdown</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Execution Node</span>
+                <span class="d-node-sub">order log &nbsp;·&nbsp; duplicate prevention &nbsp;·&nbsp; broker placement</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">reasoning is deterministic, risk management is non-negotiable</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>Active portfolio management requires constant monitoring — checking holdings, running technical analysis, reading news sentiment, and making <strong>disciplined trade decisions without letting emotion in</strong>. It's not a part-time job.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p><strong>LangGraph state machine</strong> with three nodes: Perception (portfolio state from Sharekhan), Reasoning (<strong>GPT-4 at temperature=0</strong> — deterministic — with yfinance, RSI/MACD/Bollinger, and Tavily news as tools), and Execution (risk-validated broker placement). Guardrails configurable via environment variables.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>On-demand agent that fetches live holdings, reasons over technical indicators and news sentiment, validates against risk guardrails, and logs execution. <strong>Idempotent</strong> — won't execute twice in the same trading session. Current build uses mock broker for safety; live Sharekhan API endpoints are wired and ready.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">LangGraph</span><span class="stat-l">State Machine</span></div>
+          <div class="stat"><span class="stat-n">GPT-4</span><span class="stat-l">Reasoning Engine</span></div>
+          <div class="stat"><span class="stat-n">3</span><span class="stat-l">Risk Guardrails</span></div>
+          <span class="stat-q">"deterministic — never double-executed"</span>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 04: KOOKLIVE ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Project 04 &nbsp;·&nbsp; Kooklive</span>
+          <span class="badge badge-collab">Collaboration</span>
+        </div>
+        <h3 class="case-title">Kooklive: a live-streaming platform for home cooks teaching classes during the pandemic.</h3>
+        <p class="case-sub">Built nights and weekends when half the world was suddenly learning to cook.</p>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Android App</span>
+                <span class="d-node-sub">learners + cooks &nbsp;·&nbsp; discover &nbsp;·&nbsp; join &nbsp;·&nbsp; chat</span>
+              </div>
+              <span class="d-side-label">hosted on Google Cloud</span>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Node + Express + Python workers</span>
+                <span class="d-node-sub">auth &nbsp;·&nbsp; sessions &nbsp;·&nbsp; payments &nbsp;·&nbsp; scheduling</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Zoom SDK</span>
+                <span class="d-node-sub">live video sessions</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">Firebase</span>
+                <span class="d-node-sub">realtime chat</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">MongoDB</span>
+                <span class="d-node-sub">data store</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">classic client/server, but video and chat handed off to managed services — so we could sleep</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>During the pandemic, millions of people wanted to cook at home — and skilled home cooks had knowledge worth sharing but no platform designed for <strong>live, intimate cooking classes</strong>. Existing platforms were either too expensive, too complex, or not built for food.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p>Joined as <strong>Product Manager</strong> — owned design, user workflows, live session flows, testing, and experimentation. Kept the experience simple: discover a cook, book a class, join live, cook together. Video and real-time chat handed off to <strong>Zoom and Firebase</strong> so the team could focus on product, not infrastructure.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>Android app backed by a Node/Express/Python server, Zoom SDK for live video, Firebase for real-time chat, and MongoDB for data — hosted on Google Cloud. Designed the complete <strong>user journey from discovery to live session</strong>, including session booking, payment flow, and cook onboarding.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Outcome</p>
+          <p>Ran <strong>20 live cooking sessions</strong>, all free, building an engaged community of home cooks and learners during the pandemic. A passion project that shipped — and ran.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">20</span><span class="stat-l">Live Sessions</span></div>
+          <div class="stat"><span class="stat-n">Free</span><span class="stat-l">All Sessions</span></div>
+          <div class="stat"><span class="stat-n">PM</span><span class="stat-l">Role</span></div>
+          <span class="stat-q">"built during the pandemic, shipped during the pandemic"</span>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </div><!-- /tab-body -->
+</div><!-- /sec-projects -->
+
+
+<!-- ══════════════════════════════════════
+     03 CERTIFICATIONS TAB
+══════════════════════════════════════ -->
+<div id="sec-certs" class="tab-section">
+  <div class="tab-body">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Credentials</p>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-desc">A mix of AI, product leadership, design, and financial markets — spanning 15 years of deliberate skill-building.</p>
+      </div>
+
+      <!-- AI & TECHNOLOGY -->
+      <div class="cert-group">
+        <p class="cert-group-title">AI &amp; Technology</p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <p class="cert-issuer">Anthropic</p>
+            <p class="cert-name">Claude Certified Architect (Foundations)</p>
+            <p class="cert-date">Valid Apr 2026 – Oct 2026</p>
+            <a href="https://verify.skilljar.com/c/huanchzmfz7g" target="_blank" rel="noopener" class="cert-link">Verify credential ↗</a>
+          </div>
+          <div class="cert-card">
+            <p class="cert-issuer">Udemy</p>
+            <p class="cert-name">Master Generative AI For Leaders &amp; Business Professionals</p>
+            <p class="cert-date">Issued Aug 2025 &nbsp;·&nbsp; ID: UC-0b6b4ed4</p>
+          </div>
+          <div class="cert-card">
+            <p class="cert-issuer">GitHub / Microsoft</p>
+            <p class="cert-name">GitHub Copilot Certification</p>
+            <p class="cert-date">Issued 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUSINESS & LEADERSHIP -->
+      <div class="cert-group">
+        <p class="cert-group-title">Business &amp; Leadership</p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <p class="cert-issuer">Udemy</p>
+            <p class="cert-name">Become a Master of Client &amp; Account Management</p>
+            <p class="cert-date">Issued Aug 2025 &nbsp;·&nbsp; ID: UC-82f2bf2f</p>
+          </div>
+          <div class="cert-card">
+            <p class="cert-issuer">Udemy</p>
+            <p class="cert-name">Leadership: Practical Leadership Skills</p>
+            <p class="cert-date">Issued Aug 2025 &nbsp;·&nbsp; ID: UC-31501dd0</p>
+          </div>
+          <div class="cert-card">
+            <p class="cert-issuer">Google</p>
+            <p class="cert-name">The Fundamentals of Digital Marketing</p>
+            <p class="cert-date">Issued Jan 2019 &nbsp;·&nbsp; ID: M78 SZA 4DH</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESIGN & FINANCE -->
+      <div class="cert-group">
+        <p class="cert-group-title">Design &amp; Finance</p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <p class="cert-issuer">Copenhagen Institute of Interaction Design (CIID)</p>
+            <p class="cert-name">Summer School — Prototyping as a Process</p>
+            <p class="cert-date">Issued Dec 2018</p>
+          </div>
+          <div class="cert-card">
+            <p class="cert-issuer">NSE India</p>
+            <p class="cert-name">NSE Derivative Markets</p>
+            <p class="cert-date">Issued Mar 2011</p>
+          </div>
+          <div class="cert-card">
+            <p class="cert-issuer">NSE India</p>
+            <p class="cert-name">NSE Capital Markets</p>
+            <p class="cert-date">Issued Jan 2011</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </div><!-- /tab-body -->
+</div><!-- /sec-certs -->
+
+
+<!-- ══════════════════════════════════════
+     CONTACT TAB
+══════════════════════════════════════ -->
+<div id="sec-contact" class="tab-section">
+  <div class="tab-body">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Get In Touch</p>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <p class="contact-intro">Open to conversations about product leadership, AI delivery, advisory roles, or co-founding opportunities. Feel free to reach out directly.</p>
+      <div class="contact-list">
+        <div class="c-item">
+          <span class="c-label">Email</span>
+          <span class="c-val"><a href="mailto:shriniwas.mutnure@gmail.com">shriniwas.mutnure@gmail.com</a></span>
+        </div>
+        <div class="c-item">
+          <span class="c-label">Phone</span>
+          <span class="c-val"><a href="tel:+919886865380">+91-9886865380</a></span>
+        </div>
+        <div class="c-item">
+          <span class="c-label">LinkedIn</span>
+          <span class="c-val"><a href="https://www.linkedin.com/in/shriniwas-mutnure-361b977/" target="_blank" rel="noopener">linkedin.com/in/shriniwas-mutnure-361b977</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /sec-contact -->
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <p>Shriniwas Mutnure &nbsp;·&nbsp; Product &amp; AI Business Leader &nbsp;·&nbsp; <span id="yr"></span></p>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════
+     SCRIPT — TAB SWITCHING
+══════════════════════════════════════ -->
+<script>
+  function showTab(tab) {
+    // Hide all
+    document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+    // Show selected
+    const sec = document.getElementById('sec-' + tab);
+    const btn = document.getElementById('btn-' + tab);
+    if (sec) sec.classList.add('active');
+    if (btn) btn.classList.add('active');
+    // Scroll top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  // Footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Hash-based nav (optional)
+  const h = window.location.hash.replace('#','');
+  if (['work','projects','certs','contact'].includes(h)) showTab(h);
+</script>
+
+</body>
+</html>
