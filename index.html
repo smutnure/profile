@@ -420,7 +420,7 @@
         and teams that <span class="handwritten">actually deliver.</span>
       </h1>
       <p class="hero-body">
-        Product and AI Business Leader (Claude Certified Architect) with 15+ years of experience driving 0→1 product launches,
+        Product and AI Business Leader with 15+ years of experience driving 0→1 product launches,
         growth strategy, and P&amp;L ownership across consumer internet, enterprise SaaS, and edtech.
         Co-founder. Builder. AI champion. This isn't a résumé — it's the problems I picked up,
         how I approached them, and what shipped.
@@ -656,10 +656,95 @@
         <p class="section-desc">Working AI agents and prototypes — built nights and weekends. Each one solves a real problem with LLMs, agentic architectures, or live data APIs. These aren't concepts — they run.</p>
       </div>
 
-      <!-- ── PROJECT 01: OPTIONS TRADING ── -->
+      <!-- ── PROJECT 01: SEO AI AGENT ── -->
       <div class="case-card">
         <div class="case-top">
-          <span class="case-num">Project 01 &nbsp;·&nbsp; BazaarGaram</span>
+          <span class="case-num">Project 01 &nbsp;·&nbsp; SEO AI Agent</span>
+          <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+            <span class="badge badge-ai">Groq · Serper.dev</span>
+            <span class="badge badge-personal">Personal Project</span>
+          </div>
+        </div>
+        <h3 class="case-title">A fully autonomous SEO audit agent that orchestrates 8 specialist AI skills in sequence — delivering a context-aware, prioritised action plan for any domain in under 5 minutes.</h3>
+        <p class="case-sub">Because a full SEO audit shouldn't require 5 tools, a senior consultant, and a week of waiting.</p>
+        <span class="ai-stack">Groq (LLM inference) &nbsp;·&nbsp; Serper.dev (live SERP) &nbsp;·&nbsp; Google PageSpeed &nbsp;·&nbsp; agentic orchestration</span>
+
+        <div class="diagram">
+          <div class="d-flow">
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Domain + Keyword Input</span>
+                <span class="d-node-sub">business model &nbsp;·&nbsp; vertical &nbsp;·&nbsp; geo &nbsp;·&nbsp; competitors</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Context Detector — Groq</span>
+                <span class="d-node-sub">auto-infers business model &nbsp;·&nbsp; vertical &nbsp;·&nbsp; geo from homepage</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Technical Audit</span>
+                <span class="d-node-sub">CWV &nbsp;·&nbsp; sitemap &nbsp;·&nbsp; schema &nbsp;·&nbsp; crawl</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">Keyword Research</span>
+                <span class="d-node-sub">intent clusters &nbsp;·&nbsp; gaps &nbsp;·&nbsp; AI Overview exposure</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">Competitor Gap</span>
+                <span class="d-node-sub">SERP share &nbsp;·&nbsp; keyword gaps &nbsp;·&nbsp; quick wins</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node main">
+                <span class="d-node-label">Report Synthesizer — Groq</span>
+                <span class="d-node-sub">prioritised action brief &nbsp;·&nbsp; high / medium / low impact</span>
+              </div>
+            </div>
+            <div class="d-arrow">↓</div>
+            <div class="d-row">
+              <div class="d-node">
+                <span class="d-node-label">Markdown + JSON Report</span>
+                <span class="d-node-sub">human-readable &nbsp;·&nbsp; machine-readable &nbsp;·&nbsp; shareable</span>
+              </div>
+              <div class="d-node">
+                <span class="d-node-label">HTML Dashboard</span>
+                <span class="d-node-sub">KPI cards &nbsp;·&nbsp; rank tracker &nbsp;·&nbsp; keyword intent chart</span>
+              </div>
+            </div>
+          </div>
+          <p class="diagram-caption">8 skills, one command, one prioritised brief — 100% free-tier APIs</p>
+        </div>
+
+        <div class="ps">
+          <p class="ps-label">The Problem</p>
+          <p>SEO is one of the highest-leverage GTM channels — and one of the most fragmented. The average practitioner stitches together <strong>5–8 disconnected tools</strong> (Ahrefs, SEMrush, Screaming Frog, GSC, PageSpeed) with no unified intelligence layer. Every tool gives the same recommendations regardless of whether you're a B2B SaaS or a D2C brand. Most early-stage teams don't have senior SEO expertise in-house — so organic traffic, often the highest-ROI acquisition channel, goes untapped.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Approach</p>
+          <p>Built a <strong>layered agentic orchestration system</strong> with a <code style="font-size:0.85em;background:var(--blue-light);padding:1px 5px;border-radius:4px;">BusinessContext</code> object at its core — business model, vertical, geo mode — that drives context-aware outputs from every skill. <strong>Groq</strong> provides free LLM inference; <strong>Serper.dev</strong> provides live Google SERP data. Skills run in parallel where independent, sequentially where dependent. The agent also tracks <strong>AI Overview and AI Mode citations separately</strong> — a post Google I/O 2026 requirement that existing SEO tools don't handle.</p>
+        </div>
+        <div class="ps">
+          <p class="ps-label">Solution</p>
+          <p>One CLI command: pass domain + keyword → full audit in under 5 minutes. 8 skills orchestrated in sequence: Context Detector → Technical Audit → Keyword Research → SERP Analyser → Content Optimiser → Competitor Gap → Rank Tracker → Synthesizer. Output: <strong>Markdown action brief, JSON report, and interactive HTML dashboard</strong>. Runs on <strong>100% free-tier APIs</strong> — ~100 full audits per month at zero cost.</p>
+        </div>
+        <div class="case-stats">
+          <div class="stat"><span class="stat-n">8</span><span class="stat-l">Agent Skills</span></div>
+          <div class="stat"><span class="stat-n">&lt;5 min</span><span class="stat-l">Full Audit</span></div>
+          <div class="stat"><span class="stat-n">Free</span><span class="stat-l">API Cost</span></div>
+          <span class="stat-q">"one command, full audit — no agency needed"</span>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 02: OPTIONS TRADING ── -->
+      <div class="case-card">
+        <div class="case-top">
+          <span class="case-num">Project 02 &nbsp;·&nbsp; BazaarGaram</span>
           <span class="badge badge-personal">Personal Project</span>
         </div>
         <h3 class="case-title">An options chain analyser for NIFTY &amp; BANKNIFTY that surfaces strategy recommendations — without placing a single order.</h3>
@@ -735,7 +820,7 @@
       <!-- ── PROJECT 02: JOB AGENT ── -->
       <div class="case-card">
         <div class="case-top">
-          <span class="case-num">Project 02 &nbsp;·&nbsp; Job Agent</span>
+          <span class="case-num">Project 03 &nbsp;·&nbsp; Job Agent</span>
           <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
             <span class="badge badge-ai">Gemini 2.0 Flash</span>
             <span class="badge badge-personal">Personal Project</span>
@@ -808,7 +893,7 @@
       <!-- ── PROJECT 03: PMS AGENT ── -->
       <div class="case-card">
         <div class="case-top">
-          <span class="case-num">Project 03 &nbsp;·&nbsp; Antigravity — Wealth PMS</span>
+          <span class="case-num">Project 04 &nbsp;·&nbsp; Antigravity — Wealth PMS</span>
           <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
             <span class="badge badge-ai">GPT-4 · LangGraph</span>
             <span class="badge badge-personal">Personal Project</span>
@@ -881,7 +966,7 @@
       <!-- ── PROJECT 04: KOOKLIVE ── -->
       <div class="case-card">
         <div class="case-top">
-          <span class="case-num">Project 04 &nbsp;·&nbsp; Kooklive</span>
+          <span class="case-num">Project 05 &nbsp;·&nbsp; Kooklive</span>
           <span class="badge badge-collab">Collaboration</span>
         </div>
         <h3 class="case-title">Kooklive: a live-streaming platform for home cooks teaching classes during the pandemic.</h3>
